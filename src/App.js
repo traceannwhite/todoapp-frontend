@@ -83,47 +83,51 @@ function App() {
       </Header>
       <hr />
       <main>
-        <Link to="/add">
-          <button>Add To Your To-Do List</button>
-        </Link>
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={(rp) => (
-              <MainDisplay
-                {...rp}
-                todo={todo}
-                selectTodoItem={selectTodoItem}
-                handleDelete={handleDelete}
-              />
-            )}
-          />
-          <Route
-            exact
-            path="/add"
-            render={(rp) => (
-              <Form
-                {...rp}
-                label="Add to List"
-                item={emptyTodo}
-                handleSubmit={handleAddTodo}
-              />
-            )}
-          />
-          <Route
-            exact
-            path="/edit"
-            render={(rp) => (
-              <Form
-                {...rp}
-                label="update"
-                item={selectedItem}
-                handleSubmit={handleEdit}
-              />
-            )}
-          />
-        </Switch>
+        <aside>
+          <Link to="/add">
+            <button>Add To Your To-Do List</button>
+          </Link>
+        </aside>
+        <section>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={(rp) => (
+                <MainDisplay
+                  {...rp}
+                  todo={todo}
+                  selectTodoItem={selectTodoItem}
+                  handleDelete={handleDelete}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/add"
+              render={(rp) => (
+                <Form
+                  {...rp}
+                  label="Add to List"
+                  item={emptyTodo}
+                  handleSubmit={handleAddTodo}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/edit"
+              render={(rp) => (
+                <Form
+                  {...rp}
+                  label="update"
+                  item={selectedItem}
+                  handleSubmit={handleEdit}
+                />
+              )}
+            />
+          </Switch>
+        </section>
       </main>
       <hr />
       <Footer />

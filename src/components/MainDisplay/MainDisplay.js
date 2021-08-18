@@ -5,12 +5,11 @@ const MainDisplay = (props) => {
 
   const loaded = () => (
     <div>
-      <aside>Left: Some styling goes here.</aside>
-      <article>
+      <article className="item-card">
         {todo.map((item) => (
           <div key={item._id}>
-            <h1>{item.item}</h1>
-            <h2>{item.notes}</h2>
+            <h1 className="todo-item">{item.item}</h1>
+            <p className="notes">{item.notes}</p>
             <img src={item.img} alt="" />
             <button
               onClick={() => {
@@ -21,6 +20,7 @@ const MainDisplay = (props) => {
               Edit
             </button>
             <button
+              className="delete"
               onClick={() => {
                 props.handleDelete(item);
               }}
