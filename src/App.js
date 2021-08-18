@@ -2,7 +2,6 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import { Route, Link, Switch } from "react-router-dom";
 import Header from "./components/Header/Header";
-import NavBar from "./components/NavBar/NavBar";
 import MainDisplay from "./components/MainDisplay/MainDisplay";
 import Form from "./components/Form/Form";
 import Footer from "./components/Footer/Footer";
