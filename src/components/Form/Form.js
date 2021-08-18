@@ -17,6 +17,7 @@ const Form = (props) => {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        className="item-text"
         type="text"
         name="item"
         placeholder="What's on your to-do list?"
@@ -24,6 +25,7 @@ const Form = (props) => {
         onChange={handleChange}
       />
       <input
+        className="notes-text"
         type="text"
         name="notes"
         placeholder="Additional Notes"
@@ -31,6 +33,7 @@ const Form = (props) => {
         onChange={handleChange}
       />
       <input
+        className="add-file"
         type="file"
         name="img"
         accept="image/png, image/jpeg, image/heic"
@@ -39,7 +42,7 @@ const Form = (props) => {
       />
       {/* <label>Priority task: </label> */}
       {/* <input type="checkbox" name="priority"/> */}
-      <input type="submit" value={props.label} />
+      <input type="submit" value={props.label} className="add-to-list" />
     </form>
   );
 };

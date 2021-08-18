@@ -78,9 +78,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header>
-        <NavBar />
-      </Header>
+      <Header />
       <hr />
       <main>
         <aside>
