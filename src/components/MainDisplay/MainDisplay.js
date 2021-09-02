@@ -1,5 +1,5 @@
 import React from "react";
-// import Paper from "../Paper/Paper";
+import DragAndDrop from "../DragAndDrop/DragAndDrop";
 
 const MainDisplay = (props) => {
   const { todo } = props;
@@ -8,7 +8,7 @@ const MainDisplay = (props) => {
     <div>
       <article className="item-card">
         {todo.map((item) => (
-          <div key={item._id}>
+          <div draggable="true" key={item._id} DragAndDrop={DragAndDrop}>
             <h1 className="todo-item">{item.item}</h1>
             <p className="notes">{item.notes}</p>
             <img src={item.img} alt="" />
